@@ -3,7 +3,9 @@
 use App\Http\Controllers\CategoryVideoController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\VideoController;
-use Illuminate\Support\Facades\DB;
+use App\Mail\verfiyEmail;
+use App\Models\User;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,11 +19,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/test', function () {
-    DB::update('UPDATE videos SET user_id = ? WHERE user_id IS NULL', [3]);
-
+Route::get('/test',function(){
+    $user = User::first();
+    Mail::to('mehrdadsamod@gmail.com')->send(new verfiyEmail($user));
 });
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
