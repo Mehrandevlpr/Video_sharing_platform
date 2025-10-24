@@ -8,7 +8,7 @@
             <a href="{{route('front.videos.show',$video->slug)}}"><img src="{{$video->thumbnail}}" alt=""></a>
         </div>
         <a href="{{route('front.videos.show',$video->slug)}}" class="title">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ </a>
-        <a class="channel-name" href="#">{{$video->name}}<span>
+        <a class="channel-name" href="#">{{$video->owner_name}}<span>
                 <i class="fa fa-check-circle"></i></span></a>
     </div>
 

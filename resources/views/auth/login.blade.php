@@ -10,7 +10,8 @@
         </div>
         
         <div class="form-output">
-        	<form action="{{route('login.store')}}" method="POST">
+			<x-validation-errors />
+        	<form action="{{route('login.store')}}" method="post">
 				@csrf
 				<div class="form-group label-floating">
 					<label class="control-label">ایمیل</label>
@@ -24,7 +25,7 @@
 				<div class="remember">
 					<div class="checkbox">
 						<label>
-							<input name="optionsCheckboxes" type="checkbox">
+							<input name="remember" type="checkbox">
 								مرا به خاطر بسپار
 						</label>
 					</div>
