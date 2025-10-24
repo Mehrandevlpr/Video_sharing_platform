@@ -46,6 +46,6 @@ class VideoController extends Controller
    public function update(UpdateVideoRequest $request, Video $video)
    {
       $video->update($request->all());
-      return redirect()->route('video.show', $video->slug)->with('alert', __('messages.video_edited'));
+      return redirect()->route('front.videos.show', $video->slug)->with('alert', __('messages.video_edited'));
    }
 }
