@@ -13,7 +13,7 @@ class Video extends Model
   use HasFactory;
   protected $perPage =18;
 
-  protected $fillable = ['name', 'slug', 'lenght', 'url', 'thumbnail', 'description', 'category_id'];
+  protected $fillable = ['name', 'slug', 'lenght', 'url', 'thumbnail', 'description', 'category_id', 'user_id'];
 
 
   public function getRouteKeyName()
@@ -46,8 +46,23 @@ class Video extends Model
   {
     return $this->belongsTo(Category::class);
   }
+
   public function getCategoryNameAttribute()
   {
     return $this->category?->name;
+  }
+
+  public function user()
+  {
+    return $this->belongsTo(User::class);
+  }
+  public function getOwnerNameAttribute()
+  {
+    return $this->user?->name;
+  } 
+  
+  public function getOwnerAvatarAttribute()
+  {
+    return $this->user?->gravatar;
   }
 }

@@ -36,7 +36,7 @@
 				<div class="remember">
 					<div class="checkbox">
 						<label>
-							<input name="optionsCheckboxes" type="checkbox">
+							<input name="remember" type="checkbox">
 							<a href="#">شرایط و ضوابط</a> سایت را قبول میکنم
 						</label>
 					</div>

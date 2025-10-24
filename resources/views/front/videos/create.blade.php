@@ -7,7 +7,7 @@
                     <x-validation-errors />
                     <div class="col-md-8">
 						<h1 class="page-title"><span>آپلود</span> فیلم</h1>
-						<form action="{{route('video.store')}}" method="POST">
+						<form action="{{route('front.videos.store')}}" method="POST">
                             @csrf
                         	<div class="row">
                             	<div class="col-md-6">
@@ -45,10 +45,6 @@
                             	<div class="col-md-12">
                                 	<label>توضیحات</label>
                                     <textarea name="description" value="{{old('description')}}" class="form-control" rows="4"  placeholder="توضیحات"></textarea>
-                                </div>
-                            	<div class="col-md-6">
-                                	<label>تصویر</label>
-                                    <input id="featured_image" type="file" class="file">
                                 </div>
                             	<div class="col-md-12">
                                     <button type="submit" id="contact_submit" class="btn btn-dm">ذخیره</button>

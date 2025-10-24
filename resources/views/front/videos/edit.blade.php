@@ -7,7 +7,7 @@
         <x-validation-errors />
         <div class="col-md-8">
             <h1 class="page-title"><span>آپلود</span> فیلم</h1>
-            <form action="{{route('video.update',$video->slug)}}" method="POST">
+            <form action="{{route('front.videos.update',$video->slug)}}" method="POST">
                 @csrf
                 <div class="row">
                     <div class="col-md-6">

@@ -12,7 +12,7 @@
                             </a>
                             <a href="#" class="channel-name">
                                 <span>
-                                    <i class="fa fa-check-circle"></i>
+                                    <i class="fa fa-check-circle">{{$video->owner_name}}</i>
                                 </span>
                             </a>
 
