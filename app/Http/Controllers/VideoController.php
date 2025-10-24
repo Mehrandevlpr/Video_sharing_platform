@@ -1,0 +1,51 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Http\Requests\StoreVideoRequest;
+use App\Http\Requests\UpdateVideoRequest;
+use App\Models\Category;
+use App\Models\Video;
+use Illuminate\Http\Request;
+
+// Standard controller Interface (index, show, edit, delete)
+
+class VideoController extends Controller
+{
+   public function index()
+   {
+      $videos = Video::all();
+      return $videos;
+   }
+
+   public function create()
+   {
+      $categories = Category::all();
+      return view('front.videos.create',compact('categories'));
+   }
+
+   public function store(StoreVideoRequest $request)
+   {
+      Video::create($request->all());
+      return redirect()->route('index')->with('success', __('messages.success'));
+   }
+
+
+   public function show(Request $request, Video $video)
+   {
+      return view('front.videos.show', compact('video'));
+   }
+
+   public function edit(Video $video)
+   {
+      $categories = Category::all();
+      return view('front.videos.edit', compact('video','categories'));
+   }
+
+
+   public function update(UpdateVideoRequest $request, Video $video)
+   {
+      $video->update($request->all());
+      return redirect()->route('video.show', $video->slug)->with('alert', __('messages.video_edited'));
+   }
+}
