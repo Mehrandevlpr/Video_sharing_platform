@@ -1,13 +1,10 @@
 <?php
 
+use App\Events\VideoCreated;
 use App\Http\Controllers\CategoryVideoController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\VideoController;
-use App\Jobs\OPT;
-use App\Jobs\ProccessVideo;
-use App\Mail\verfiyEmail;
 use App\Models\User;
-use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,11 +18,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/test',function(){
-    $user = User::first();
-    Mail::to('mehrdadsamod@gmail.com')->send(new verfiyEmail($user));
-    // OPT::dispatch();
-});
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

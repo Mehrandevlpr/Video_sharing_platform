@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\VideoCreated;
 use App\Http\Requests\StoreVideoRequest;
 use App\Http\Requests\UpdateVideoRequest;
 use App\Models\Category;
 use App\Models\Video;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 // Standard controller Interface (index, show, edit, delete)
 
@@ -26,8 +28,8 @@ class VideoController extends Controller
 
    public function store(StoreVideoRequest $request)
    {
-
       $request->user()->videos()->create($request->all());
+      VideoCreated::dispatch(Auth::user());
       return redirect()->route('front.index')->with('success', __('messages.success'));
    }
 
