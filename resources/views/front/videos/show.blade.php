@@ -6,7 +6,9 @@
                         {{ session('alert') }}
                     </div>
                 @endif
-               <div class="row">
+                
+                <div class="row">
+                <x-validation-errors />
                 <!-- Watch -->
                 <div class="col-md-8">
                     <div id="watch">
@@ -64,22 +66,25 @@
 
                         <!-- Comments -->
                         <div id="comments" class="post-comments">
-                            <h3 class="post-box-title"><span>19</span> نظرات</h3>
+                            <h3 class="post-box-title"><span>{{$video->comments->count()}}</span> نظرات</h3>
                             <ul class="comments-list">
+                                @foreach($video->comments as $comment)
                                 <li>
                                     <div class="post_author">
                                         <div class="img_in">
-                                            <a href="#"><img src="/img/c1.jpg" alt=""></a>
+                                            <a href="#"><img src="{{$comment->user->gravatar}}" alt=""></a>
                                         </div>
-                                        <a href="#" class="author-name">داود طاهری</a>
-                                        <time datetime="2017-03-24T18:18">مرداد 27, 1397 - 11:00</time>
+                                        <a href="#" class="author-name">{{$comment->user->name}}</a>
+                                        <time datetime="2017-03-24T18:18">{{$comment->created_at}}</time>
                                     </div>
-                                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
-                                        گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
-                                    </p>
+                                    <p>{{$comment->body}}</p>
                                     <a href="#" class="reply">پاسخ</a>
 
-                                    <ul class="children">
+                                </li>
+                               @endforeach
+                            </ul>
+                            <!--  ooooooooooooooo-->
+                                    <!-- <ul class="children">
                                         <li>
                                             <div class="post_author">
                                                 <div class="img_in">
@@ -93,35 +98,16 @@
                                                 سطرآنچنان که لازم است</p>
                                             <a href="#" class="reply">پاسخ</a>
                                         </li>
-                                    </ul>
-
-
-                                </li>
-                                <li>
-                                    <div class="post_author">
-                                        <div class="img_in">
-                                            <a href="#"><img src="/img/c2.jpg" alt=""></a>
-                                        </div>
-                                        <a href="#" class="author-name">بهمن نجاتی</a>
-                                        <time datetime="2017-03-24T18:18">مرداد 27, 1397 - 11:00</time>
-                                    </div>
-                                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
-                                        گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
-                                    </p>
-                                    <a href="#" class="reply">پاسخ</a>
-                                </li>
-
-                            </ul>
-
-
+                                    </ul> -->
+                            <!-- ooooooooooooooo -->
+                             @auth
                             <h3 class="post-box-title">ارسال نظرات</h3>
-                            <form>
-                                <input type="text" class="form-control" id="Name" placeholder="نام">
-                                <input type="email" class="form-control" id="Email" placeholder="ایمیل">
-                                <input type="text" class="form-control" placeholder="سایت">
-                                <textarea class="form-control" rows="8" id="Message" placeholder="پیام"></textarea>
-                                <button type="button" id="contact_submit" class="btn btn-dm">ارسال پیام</button>
+                            <form action="{{route('comments.store', $video )}}" method="post">
+                                @csrf
+                                <textarea class="form-control" rows="8" id="Message" placeholder="پیام" name="body"></textarea>
+                                <button id="contact_submit" class="btn btn-dm">ارسال پیام</button>
                             </form>
+                            @endauth
                         </div>
                         <!-- // Comments -->
 

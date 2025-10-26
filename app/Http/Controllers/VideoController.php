@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Events\VideoCreated;
+use App\Http\Middleware\CheckEmailVerification;
 use App\Http\Requests\StoreVideoRequest;
 use App\Http\Requests\UpdateVideoRequest;
 use App\Models\Category;
@@ -14,6 +15,12 @@ use Illuminate\Support\Facades\Auth;
 
 class VideoController extends Controller
 {
+
+   // public function __construct()
+   // {
+   //    $this->middleware(CheckEmailVerification::class,['only'=>['create']]);
+   // }
+
    public function index()
    {
       $videos = Video::all();
@@ -36,6 +43,7 @@ class VideoController extends Controller
 
    public function show(Request $request, Video $video)
    {
+      $video->load('comments.user');
       return view('front.videos.show', compact('video'));
    }
 

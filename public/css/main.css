@@ -137,9 +137,13 @@ body{
 	font-weight:300;
 	font-family: 'IRANSansWeb', sans-serif;
 	background-color: #7d7d7d6b;
-	height: 100%;
+	height: 100vh;
 	position: relative;
 	direction: rtl;
+}
+
+.rtl{
+	direction: rtl !important;
 }
 /* body:after{ */
 /*     content:" "; */
@@ -1447,8 +1451,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   font-size: 13px;
-  color: #888da8;
+  color: #3f3f41;
   font-weight: 300;
+}
+#log-in div.padding{
+	padding: 12px;
+}
+.site-form{
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .log-in-form input,
 .log-in-form button {

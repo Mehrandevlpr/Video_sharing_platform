@@ -770,6 +770,10 @@ select {
   margin-left: auto;
   margin-right: auto;
 }
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
 .-ml-px {
   margin-left: -1px;
 }
@@ -975,6 +979,9 @@ select {
 }
 .overflow-hidden {
   overflow: hidden;
+}
+.break-all {
+  word-break: break-all;
 }
 .rounded-lg {
   border-radius: 0.5rem;
@@ -1335,10 +1342,6 @@ select {
 .hover\:text-gray-800:hover {
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity, 1));
-}
-.hover\:text-gray-900:hover {
-  --tw-text-opacity: 1;
-  color: rgb(17 24 39 / var(--tw-text-opacity, 1));
 }
 .focus\:z-10:focus {
   z-index: 10;

@@ -1,39 +1,29 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+@extends('auth.auth-layout')
+@section('class-body','full-height')
+@section('content')
+    <div id="log-in" class="site-form log-in-form">
 
-        <div class="mb-4 text-sm text-gray-600">
-            {{ __('Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you didn\'t receive the email, we will gladly send you another.') }}
-        </div>
-
-        @if (session('status') == 'verification-link-sent')
-            <div class="mb-4 font-medium text-sm text-green-600">
-                {{ __('A new verification link has been sent to the email address you provided during registration.') }}
+        <div id="log-in-head">
+            <h1>تاییده ایمیل</h1>
+            <div id="logo">
+                <a href="{{ route('front.index') }}">
+                    <img src="{{asset('/img/logo.png')}}" alt="">
+                </a>
             </div>
-        @endif
+        </div>
 
-        <div class="mt-4 flex items-center justify-between">
-            <form method="POST" action="{{ route('verification.send') }}">
+        <div class="my-4 text-sm text-gray-600 padding">
+            یک لینک تایید به ایمیل شما ارسال شده است. لطفا برای تایید آدرس ایمیل خود بر روی لینک موجود در ایمیل کلیک کنید.
+        </div>
+
+        <div class="form-output">
+            <x-validation-errors />
+            <form action="{{route('verification.send')}}" method="post">
                 @csrf
-
-                <div>
-                    <x-button>
-                        {{ __('Resend Verification Email') }}
-                    </x-button>
-                </div>
-            </form>
-
-            <form method="get" action="{{ route('logout') }}">
-                @csrf
-
-                <button type="submit" class="underline text-sm text-gray-600 hover:text-gray-900">
-                    {{ __('Log Out') }}
-                </button>
+                <button type="submit" class="btn btn-lg btn-primary full-width">ارسال دوباره لینک تایید</button>
             </form>
         </div>
-    </x-auth-card>
-</x-guest-layout>
+
+    </div>
+
+    @endsection

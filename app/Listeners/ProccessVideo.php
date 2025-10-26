@@ -6,7 +6,7 @@ use App\Events\VideoCreated;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 
-class ProccessVideo
+class ProccessVideo implements ShouldQueue
 {
     /**
      * Create the event listener.

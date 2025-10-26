@@ -3,10 +3,17 @@
 
 @section('content')
             @if (session('success'))
-                <div class="alert alert-success mt-5">
+                <div class="alert alert-success mt-5 rtl">
                     {{ session('success') }}
                 </div>
             @endif
+
+            @if (session('alert'))
+                <div class="alert alert-success mt-5 rtl" >
+                    {{ session('alert') }}
+            </div>
+            @endif
+
             <x-latest-videos></x-latest-videos> 
             
             <h1 class="new-video-title"><i class="fa fa-bolt"></i> پربازدیدترین ویدیوها</h1>
