@@ -31,12 +31,12 @@
             <div class="video-share">
                 <ul class="like">
                     <li><a class="deslike"
-                            href="{{route('videos.like',  ['likeable_type' => 'video', 'likeable_id' => $video , 'vote' => -1])}}">
+                            href="{{route('dislikes.store',  ['likeable_type' => 'video', 'likeable_id' => $video ])}}">
                             {{$video->dislikes_count}}
                             <i class="fa fa-thumbs-down"></i></a>
                     </li>
                     <li>
-                        <a class="like" href="{{route('videos.like', ['likeable_type' => 'video', 'likeable_id' => $video , 'vote' => 1])}}">
+                        <a class="like" href="{{route('likes.store', ['likeable_type' => 'video', 'likeable_id' => $video ])}}">
                             {{$video->likes_count}}
                             <i class="fa fa-thumbs-up"></i></a>
                     </li>
@@ -88,12 +88,12 @@
                             <time datetime="2017-03-24T18:18">{{$comment->created_at}}</time>
                             <div class="btn-group">
                                 <a class="btn btn-secondary mr-5 rounded px-2"
-                                    href="{{route('videos.like', ['likeable_type' => 'comment', 'likeable_id' => $comment ,'vote' => -1])}}">
+                                    href="{{route('dislikes.store', ['likeable_type' => 'comment', 'likeable_id' => $comment])}}">
                                     {{$comment->dislikes_count}}
                                     <i class="fa fa-thumbs-down text-muted"></i>
                                 </a>
                                 <a class="btn btn-secondary mr-5 rounded px-2"
-                                    href="{{route('videos.like', ['likeable_type' => 'comment', 'likeable_id' => $comment, 'vote' => 1])}}">
+                                    href="{{route('likes.store', ['likeable_type' => 'comment', 'likeable_id' => $comment])}}">
                                     {{$comment->likes_count}}
                                     <i class="fa fa-thumbs-up text-muted"></i>
                                 </a>

@@ -3,6 +3,7 @@
 use App\Events\VideoCreated;
 use App\Http\Controllers\CategoryVideoController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\DislikeController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LikeController;
 use App\Http\Controllers\VideoController;
@@ -34,6 +35,7 @@ Route::get('/categories/{category:slug}/videos', [CategoryVideoController::class
 
 
 Route::post('/videos/{video}/comments', [CommentController::class ,'store'])->name('comments.store');
-Route::get('/{likeable_type}/{likeable_id}/like', [LikeController::class ,'store'])->name('videos.like');
+Route::get('/{likeable_type}/{likeable_id}/like', [LikeController::class ,'store'])->name('likes.store');
+Route::get('/{likeable_type}/{likeable_id}/dislike', [DislikeController::class ,'store'])->name('dislikes.store');
 
 require __DIR__.'/auth.php';

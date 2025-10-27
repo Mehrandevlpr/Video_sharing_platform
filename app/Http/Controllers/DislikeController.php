@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Video;
 use Illuminate\Http\Request;
 
-class LikeController extends Controller
+class DislikeController extends Controller
 {
     public function store(Request $request,string $likeable_type,  $likeable_id)
     {
@@ -15,7 +14,7 @@ class LikeController extends Controller
 
         $existingLike = $likeable_id->likes()
         ->where('user_id', auth()->id())
-        ->where('vote', 1)
+        ->where('vote', -1)
         ->first();
 
             
@@ -24,14 +23,14 @@ class LikeController extends Controller
             $likeable_id->likes()->create([
                 'likeable_type' => $likeable_type,
                 'user_id' => auth()->id(),
-                'vote' => 1
+                'vote' => -1
             ]);
 
             return back();
         }
 
         // delete if found and equal
-        if ($existingLike->vote === 1) {
+        if ($existingLike->vote === -1) {
             $existingLike->delete();
             return back();
         }
@@ -39,3 +38,4 @@ class LikeController extends Controller
         return back();
     }
 }
+
