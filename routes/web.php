@@ -4,6 +4,7 @@ use App\Events\VideoCreated;
 use App\Http\Controllers\CategoryVideoController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\LikeController;
 use App\Http\Controllers\VideoController;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
@@ -33,4 +34,6 @@ Route::get('/categories/{category:slug}/videos', [CategoryVideoController::class
 
 
 Route::post('/videos/{video}/comments', [CommentController::class ,'store'])->name('comments.store');
+Route::get('/videos/{video}/like', [LikeController::class ,'store'])->name('videos.like');
+// Route::post('/videos/{video}/dislike', [LikeController::class ,'store'])->name('videos.dislike');
 require __DIR__.'/auth.php';
