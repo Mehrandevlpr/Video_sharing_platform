@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Traits\Likeable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Hekmatinasser\Verta\Verta;
@@ -10,7 +11,7 @@ use Illuminate\Support\Str;
 
 class Video extends Model
 {
-  use HasFactory;
+  use HasFactory, Likeable;
   protected $perPage =18;
 
   protected $fillable = ['name', 'slug', 'lenght', 'url', 'thumbnail', 'description', 'category_id', 'user_id'];
