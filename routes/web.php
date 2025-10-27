@@ -34,6 +34,6 @@ Route::get('/categories/{category:slug}/videos', [CategoryVideoController::class
 
 
 Route::post('/videos/{video}/comments', [CommentController::class ,'store'])->name('comments.store');
-Route::get('/videos/{video}/like', [LikeController::class ,'store'])->name('videos.like');
-// Route::post('/videos/{video}/dislike', [LikeController::class ,'store'])->name('videos.dislike');
+Route::get('/{likeable_type}/{likeable_id}/like', [LikeController::class ,'store'])->name('videos.like');
+
 require __DIR__.'/auth.php';

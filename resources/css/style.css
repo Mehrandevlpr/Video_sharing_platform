@@ -1670,7 +1670,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	font-size: 14px;
 	font-weight: 900;
 	color: #6f6f6f;
-	display: block;
 	text-transform: uppercase;
 }
 #comments  ul.comments-list li .post_author time{
