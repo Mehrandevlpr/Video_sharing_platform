@@ -26,10 +26,10 @@ It’s designed to demonstrate scalable, maintainable, and clean Laravel archite
 ## 🧱 Tech Stack
 
 - **Framework:** Laravel (Latest version)
-- **Database:** MySQL / PostgreSQL
-- **Front-end:** Blade, Alpine.js / Vue.js
+- **Database:** MySQL 
+- **Front-end:** Blade
 - **Styling:** Tailwind CSS
-- **Storage:** Laravel Filesystem (Local / S3)
+- **Storage:** Laravel Filesystem (Local)
 - **Queue:** Redis / Database Queue
 - **Broadcasting:** Pusher / Laravel Echo
 
@@ -54,7 +54,7 @@ It’s designed to demonstrate scalable, maintainable, and clean Laravel archite
 ---
 
 ## 🏗️ Project Structure
-
+<pre>
 app/
 ├── Console/
 ├── Events/
@@ -69,3 +69,4 @@ app/
 ├── Policies/
 ├── Providers/
 └── Services/
+</pre>
