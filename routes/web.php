@@ -1,6 +1,5 @@
 <?php
 
-use App\Events\VideoCreated;
 use App\Http\Controllers\CategoryVideoController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\DislikeController;
@@ -8,6 +7,7 @@ use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LikeController;
 use App\Http\Controllers\VideoController;
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +21,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/test',function(){
+//      DB::table('videos')
+//         ->where('user_id','>',200)
+//         ->update(['user_id' =>4]); 
+// });
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

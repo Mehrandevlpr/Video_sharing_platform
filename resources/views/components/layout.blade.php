@@ -64,7 +64,7 @@
                     <div class="dropdown">
                         <a data-toggle="dropdown" href="#" class="user-area">
                             <div class="thumb"><img
-                                    src="{{asset('img/ch-4.jpg')}}" alt="">
+                                    src="{{asset('img/ch-3.jpg')}}" alt="">
                             </div>
                             <h2>بهراد </h2>
                             <h3>25 اشتراک</h3>

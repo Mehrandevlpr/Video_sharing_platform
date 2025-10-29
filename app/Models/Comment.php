@@ -9,24 +9,22 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Model
 {
-    use HasFactory, Likeable;
+  use HasFactory, Likeable;
 
-    protected $fillable = ['user_id', 'body'];
+  protected $fillable = ['user_id', 'body'];
 
-    public function video()
-    {
-        return $this->belongsTo(Video::class);
-    }
+  public function video()
+  {
+    return $this->belongsTo(Video::class);
+  }
 
-    public function user()
-    {
-        return $this->belongsTo(User::class);
-    }
-    
+  public function user()
+  {
+    return $this->belongsTo(User::class);
+  }
+
   public function getCreatedAtAttribute($created_at)
   {
     return (new Verta($created_at))->formatDifference();
   }
-
-
 }
