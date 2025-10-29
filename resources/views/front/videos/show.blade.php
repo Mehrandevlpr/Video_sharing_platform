@@ -25,7 +25,7 @@
 
             <div class="bg-light">
                 <p class="m-5 p-5">
-                    {{$video->description}}
+                    {{$video->description_value}}
                 </p>
             </div>
             <div class="video-share">

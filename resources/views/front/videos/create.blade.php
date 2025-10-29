@@ -19,10 +19,6 @@
                                     <input name="slug" value="{{old('slug')}}" type="text" class="form-control" placeholder="برچسب ها">
                                 </div>
                             	<div class="col-md-6">
-                                	<label>@lang('video-create.lenght')</label>
-                                    <input name="length" value="{{old('length') ?? ''}}" type="number" class="form-control" placeholder="مدت زمان">
-                                </div>
-                            	<div class="col-md-6">
                                 	<label>آدرس  ویدیو</label>
                                     <input name="file" value="{{old('file')}}" type="file" class="form-control" placeholder="آدرس لینک">
                                 </div>
@@ -33,10 +29,6 @@
                                         <option value="{{$category->id}}">{{$category->name}}</option>
                                         @endforeach
                                     </select>
-                                </div>
-                            	<div class="col-md-6">
-                                	<label>تصویر بندانگشتی</label>
-                                    <input name="thumbnail" value="{{old('thumbnail')}}" type="text" class="form-control" placeholder="آدرس لینک">
                                 </div>
                             	<div class="col-md-12">
                                 	<label>توضیحات</label>

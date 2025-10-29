@@ -19,10 +19,6 @@
                         <input name="slug" value="{{$video->slug}}" type="text" class="form-control" placeholder="برچسب ها">
                     </div>
                     <div class="col-md-6">
-                        <label>@lang('video-create.lenght')</label>
-                        <input name="length" value="{{$video->length}}" type="text" class="form-control" placeholder="@lang('video-create.lenght')">
-                    </div>
-                    <div class="col-md-6">
                         <label>آپلود فیلم</label>
                         <input id="" type="file" name="file" class="form-control">
                     </div>
@@ -37,13 +33,9 @@
                             @endforeach
                         </select>
                     </div>
-                    <div class="col-md-6">
-                        <label>تصویر بندانگشتی</label>
-                        <input name="thumbnail" value="{{$video->thumbnail}}" type="text" class="form-control" placeholder="آدرس لینک">
-                    </div>
                     <div class="col-md-12">
                         <label>توضیحات</label>
-                        <textarea name="description" value="{{$video->description}}" class="form-control" rows="4" placeholder="توضیحات"></textarea>
+                        <textarea name="description" value="{{$video->description_value}}" class="form-control" rows="4" placeholder="توضیحات"></textarea>
                     </div>
                     <div class="col-md-12">
                         <button type="submit" id="contact_submit" class="btn btn-dm">ذخیره</button>
