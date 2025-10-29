@@ -2,20 +2,29 @@
 
 namespace App\Services\FFmpeg;
 
-use FFMpeg\FFMpeg;
-use FFMpeg\FFProbe;
+use \FFMpeg\FFMpeg;
+use \FFMpeg\FFProbe;
 use Illuminate\Support\Facades\Storage;
 
 class FFmpegAdapter
 {
 
-    private $ffmpegProbe;
-    private $video_probe;
+    protected $ffmpegProbe;
+    protected $ffmpegOriginalPath;
+    protected $ffmpeg;
+    protected $video_probe;
 
-    public function __construct(string $ffmpegPath)
+    public function __construct(public string $ffmpegPath)
     {
-         $this->ffmpegProbe = FFProbe::create();
-         $this->video_probe = $this->ffmpegProbe->format(Storage::path($ffmpegPath));
+
+        $this->ffmpegOriginalPath = $ffmpegPath;
+        $this->ffmpeg = FFMpeg::create();
+        $this->ffmpegProbe = FFProbe::create([
+            'ffmpeg.binaries'  => '/usr/bin/ffmpeg',
+            'ffprobe.binaries' => '/usr/bin/ffprobe',
+        ]);
+
+        $this->video_probe = $this->ffmpegProbe->format(Storage::path($ffmpegPath));
     }
     public function convertToMp4($inputFile, $outputFile)
     {
@@ -25,12 +34,14 @@ class FFmpegAdapter
         return $returnVar === 0;
     }
 
-    public function getFrameImage($inputFile, $time, $outputFile)
+    public function getFrameImage($time = 1) : string
     {
-        $ffmpeg = FFMpeg::create();
-        $video = $ffmpeg->open(Storage::path($inputFile));
-        $video->frame(\FFMpeg\Coordinate\TimeCode::fromSeconds($time))
-              ->save(Storage::path($outputFile));
+        $video = $this->ffmpeg->open(Storage::path($this->ffmpegOriginalPath));
+        $outputFile =  pathinfo($this->ffmpegOriginalPath, PATHINFO_FILENAME) . '_frame.jpg';
+        $storage_path = storage_path('app/public/'.$outputFile);
+        $video->frame(\FFMpeg\Coordinate\TimeCode::fromSeconds($time))->save($storage_path);
+
+        return $outputFile;
     }
 
     public function getDuration(): int
@@ -40,8 +51,7 @@ class FFmpegAdapter
 
     public function setFrameFileType($inputFile, $outputFile, $format)
     {
-        $ffmpeg = FFMpeg::create();
-        $video = $ffmpeg->open(Storage::path($inputFile));
+        $video = $this->ffmpeg->open(Storage::path($inputFile));
         $video->save(new \FFMpeg\Format\Video\X264(), Storage::path($outputFile));
     }
 }

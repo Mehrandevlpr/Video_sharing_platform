@@ -54,7 +54,9 @@ It’s designed to demonstrate scalable, maintainable, and clean Laravel archite
 ---
 
 ## 🏗️ Project Structure
+
 <pre>
+
 app/
 ├── Console/
 ├── Events/

@@ -3,7 +3,7 @@
                         <div class="thumb">
                             <div class="hover-efect"></div>
                             <small class="time">{{$video->length_in_human}}</small>
-                            <a href="{{route('front.videos.show',$video->slug)}}"><img src="{{$video->thumbnail}}" alt=""></a>
+                            <a href="{{route('front.videos.show',$video->slug)}}"><img src="{{$video->video_thumbnail}}" alt=""></a>
                         </div>
                         <div class="video-info">
                             <a href="{{route('front.videos.show',$video->slug)}}" class="title">{{$video->name}}</a>

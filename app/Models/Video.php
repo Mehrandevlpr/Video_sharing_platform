@@ -15,7 +15,7 @@ class Video extends Model
   use HasFactory, Likeable;
   protected $perPage = 18;
 
-  protected $fillable = ['name', 'slug', 'lenght', 'path', 'thumbnail', 'description', 'category_id', 'user_id'];
+  protected $fillable = ['name', 'slug', 'thumbnail', 'length', 'path', 'description', 'category_id', 'user_id'];
 
 
   public function getRouteKeyName()
@@ -23,9 +23,13 @@ class Video extends Model
     return 'slug';
   }
 
-  public function getDescriptionAttribute($description)
+  public function getDescriptionValueAttribute()
   {
-    return Str::limit($description, 40) . '...';
+    return Str::limit($this->description, 40) . '...';
+  }
+  public function getVideoThumbnailAttribute()
+  {
+    return  './storage/' . $this->thumbnail;
   }
 
   public function getCreatedAtAttribute($created_at)
@@ -34,9 +38,9 @@ class Video extends Model
   }
 
 
-  public function getlengthInHumanAttribute($lenght)
+  public function getLengthInHumanAttribute()
   {
-    return gmdate('h:i', $lenght) . ' ثانیه';
+    return gmdate('i:s', $this->length) . ' ثانیه';
   }
 
   public function relatedVideos(int $count = 8)
