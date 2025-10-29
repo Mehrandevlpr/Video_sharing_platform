@@ -7,7 +7,7 @@
                     <x-validation-errors />
                     <div class="col-md-8">
 						<h1 class="page-title"><span>آپلود</span> فیلم</h1>
-						<form action="{{route('front.videos.store')}}" method="POST">
+						<form action="{{route('front.videos.store')}}" method="POST" enctype="multipart/form-data">
                             @csrf
                         	<div class="row">
                             	<div class="col-md-6">
@@ -23,8 +23,8 @@
                                     <input name="length" value="{{old('length') ?? ''}}" type="number" class="form-control" placeholder="مدت زمان">
                                 </div>
                             	<div class="col-md-6">
-                                	<label>لینک</label>
-                                    <input name="url" value="{{old('url')}}" type="text" class="form-control" placeholder="آدرس لینک">
+                                	<label>آدرس  ویدیو</label>
+                                    <input name="file" value="{{old('file')}}" type="file" class="form-control" placeholder="آدرس لینک">
                                 </div>
                                 <div class="col-md-6">
                                 	<label>دسته بندی</label>
@@ -37,10 +37,6 @@
                             	<div class="col-md-6">
                                 	<label>تصویر بندانگشتی</label>
                                     <input name="thumbnail" value="{{old('thumbnail')}}" type="text" class="form-control" placeholder="آدرس لینک">
-                                </div>
-                            	<div class="col-md-6">
-                                	<label>آپلود فیلم</label>
-                                    <input  id="upload_file" type="file" class="file">
                                 </div>
                             	<div class="col-md-12">
                                 	<label>توضیحات</label>

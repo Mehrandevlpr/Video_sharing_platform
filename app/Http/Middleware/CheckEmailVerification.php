@@ -16,7 +16,7 @@ class CheckEmailVerification
      */
     public function handle(Request $request, Closure $next)
     {
-        if($request->user && $request->user()->hasVerifiedEmail()){
+        if($request->user() && $request->user()->hasVerifiedEmail()){
             return $next($request);
         }
 

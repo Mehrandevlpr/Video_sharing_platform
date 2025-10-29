@@ -1019,6 +1019,7 @@ h1.new-video-title .fa{
 	margin: 0px;
 	padding-top: 4px;
 	padding-bottom: 4px;
+	display: inline-block;
 }
 .video-item span.date{}
 
