@@ -11,6 +11,7 @@ use App\Services\FFmpeg\FFmpegAdapter;
 use App\Services\VideoService\VideoService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Storage;
 
 // Standard controller Interface (index, show, edit, delete)
@@ -47,6 +48,7 @@ class VideoController extends Controller
 
    public function edit(Request $request, Video $video)
    {
+      if(!Gate::authorize('edit-video', $video)) ;
       $categories = Category::all();
       return view('front.videos.edit', compact('video', 'categories', 'request'));
    }
