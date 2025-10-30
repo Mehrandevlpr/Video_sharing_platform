@@ -22,10 +22,27 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+// sql join  for popular video querybuilder
+/**
+ * select video.id as video_id, sum(likes.vote) from videos
+ * left join likes 
+ * on likes.likeable_id = video.id 
+ * and likes.likeable_type = "\\App\\Models\\Video"
+ * group by video.id;
+ */
+
+
 Route::get('/test',function(){
-    //  DB::table('videos')
-    //     ->where('user_id','>',200)
-    //     ->update(['user_id' =>4]);
+    //  DB::table('likes')
+    //     ->insert([
+    //         'vote'=> -1,
+    //         'likeable_type' => 'App\\Models\Video',
+    //         'likeable_id' => random_int(185,200),
+    //         'user_id' => random_int(3,8),
+    //         'created_at' => gmdate('Y-m-d'),
+    //         'updated_at' => gmdate('Y-m-d'),
+    //     ]);
 
     // Video::query()->update(['thumbnail' => 'abk5NmFPKtSU5YHXlWrTplMyzKCSD1cYmoouw3mr_frame.jpg']);
 });
