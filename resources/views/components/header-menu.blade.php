@@ -5,7 +5,7 @@
                     <ul class="main-category-menu">
                         @foreach($categories as $category)
                         <li class="color-{{$category->id ?? 1 }}">
-                            <a href="{{route('categories.videos.index',$category->slug)}}">
+                            <a href="{{route('categories.videos.index',$category)}}">
                                 <i class="{{$category->icon}}"></i>
                                 {{$category->name}}
                             </a>

@@ -695,6 +695,11 @@ header ul.account-menu li  .color-3{
 header ul.account-menu li  .color-4{
 	color: #444444;
 }
+
+form label[for="inputSort"], form label[for="inputLength"]{
+	display: block;
+	direction: rtl;
+}
 #main-category{
 	background-color: #FFF;
 	-webkit-box-shadow: -1px 2px 26px -6px rgba(0,0,0,0.37);

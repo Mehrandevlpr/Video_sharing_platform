@@ -44,9 +44,9 @@
                 </div><!-- // col-md-2 -->
                 <div class="col-lg-3 col-md-3 col-sm-6 hidden-xs hidden-sm">
                     <div class="search-form">
-                        <form id="search" action="#" method="post">
-                            <input type="text" placeholder="جستجو ..." />
-                            <input type="submit" value="Keywords" />
+                        <form id="search" action="#" method="get">
+                            <input type="text" name="q" placeholder="جستجو ..." />
+                            <input type="submit" />
                         </form>
                     </div>
                 </div><!-- // col-md-3 -->

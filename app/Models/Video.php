@@ -6,7 +6,7 @@ use App\Models\Traits\Likeable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Hekmatinasser\Verta\Verta;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Str;
 
 
@@ -80,6 +80,22 @@ class Video extends Model
 
   public function getVideoUrlAttribute()
   {
-    return '/storage/'.$this->path;
+    return '/storage/' . $this->path;
+  }
+
+  public function scopeFilter(Builder $builder, array $params)
+  {
+
+    if (isset($params['length']) && ((int)$params['length'] === 1)) {
+      $builder->where('length', '<', 60);
+    }
+    if (isset($params['length']) && ((int)$params['length'] === 2)) {
+      $builder->whereBetween('length', [60, 300]);
+    }
+    if (isset($params['length']) && ((int)$params['length'] === 3)) {
+      $builder->where('length', '>', 300);
+    }
+    
+    return $builder;
   }
 }

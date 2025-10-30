@@ -18,12 +18,13 @@ class VideoService
         $data['path'] = $path;
         $data['length'] = $ffmpegService->getDuration();
         $data['thumbnail'] = $ffmpegService->getFrameImage();
+        return $data;
     }
     
     public function create(User $user, array $data)
     {
         $data = $this->handleFileUpload($data);
-        return $user->videos()->create();
+        return $user->videos()->create($data);
     }
 
     public function update(Video $video, array $data)
