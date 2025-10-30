@@ -10,7 +10,7 @@
             <select name="sortBy" class="form-control" id="inputSort">
                 <option {{ request()->query('sortBy') === 'created_at' ? 'selected' : '' }} value="created_at">جدیدترین</option>
                 <option {{ request()->query('sortBy') === 'like' ? 'selected' : '' }} value="like">محبوب ترین</option>
-                <option {{ request()->query('sortBy') === 'duration' ? 'selected' : '' }} value="duration">مدت زمان</option>
+                <option {{ request()->query('sortBy') === 'length' ? 'selected' : '' }} value="length">مدت زمان</option>
             </select>
         </div>
         <div class="form-group col-md-3">
