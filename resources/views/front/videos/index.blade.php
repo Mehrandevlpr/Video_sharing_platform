@@ -22,6 +22,7 @@
                 <option {{ request()->query('length') == 3 ? 'selected' : '' }} value="3">بیشتر از 5 دقیقه</option>
             </select>
         </div>
+        <input type="hidden" value="{{ request()->query('q') }}" name="q">
         <div class="form-group col-md-3 mt-5">
             <button type="submit" class="btn btn-primary">فیلتر</button>
         </div>

@@ -10,14 +10,9 @@ class CategoryVideoController extends Controller
     public function index(Request $request, Category $category)
     {
 
-
-        // if($request->has('sortBy')){
-        //     $videos = $videos->orderBy($request->input('sortBy'), 'desc');
-        // }
         
         $videos = $category->videos()
         ->filter($request->all())
-        ->sort($request->all())
         ->paginate()
         ->withQueryString();
         
