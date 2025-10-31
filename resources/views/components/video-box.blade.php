@@ -6,10 +6,19 @@
                             <a href="{{route('front.videos.show',$video->slug)}}"><img src="{{$video->video_thumbnail}}" alt=""></a>
                         </div>
                         <div class="video-info">
-                            <a href="{{route('front.videos.show',$video->slug)}}" class="title">{{$video->name}}</a>
-                            <a href="{{route('front.videos.edit',$video->slug)}}">
-                                <i class="fa fa-pencil" aria-hidden="true"></i>
-                            </a>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <a href="{{route('front.videos.show',$video->slug)}}" class="title">{{$video->name}}</a>
+
+                                </div>
+                                @can('update',$video)
+                                <div class="col-md-6">
+                                    <a href="{{route('front.videos.edit',$video->slug)}}" class="icon-pencil">
+                                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                                @endcan
+                            </div>
                             <a href="#" class="channel-name">
                                 <span>
                                     <i class="fa fa-check-circle">{{$video->owner_name}}</i>

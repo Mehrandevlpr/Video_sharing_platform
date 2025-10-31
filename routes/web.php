@@ -44,7 +44,7 @@ Route::get('/test',function(){
     //         'updated_at' => gmdate('Y-m-d'),
     //     ]);
 
-    // Video::query()->update(['thumbnail' => 'abk5NmFPKtSU5YHXlWrTplMyzKCSD1cYmoouw3mr_frame.jpg']);
+    // Video::query()->update(['thumbnail' => 'AYTfWvsxP107DQxspCua9U2X4CRK94kXtZi0aySv_frame.jpg']);
 });
 Route::get('/dashboard', function () {
     return view('dashboard');

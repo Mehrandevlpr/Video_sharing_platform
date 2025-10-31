@@ -15,10 +15,11 @@ class Video extends Model
 {
   use HasFactory, Likeable;
   protected $perPage = 18;
-
   protected $fillable = ['name', 'slug', 'thumbnail', 'length', 'path', 'description', 'category_id', 'user_id'];
-
-
+  // for serialization
+  // protected $hidden  = ['updated_at', 'created_at'];
+  // protected $appends = ['owner_name'];
+  
   public function getRouteKeyName()
   {
     return 'slug';
@@ -30,7 +31,7 @@ class Video extends Model
   }
   public function getVideoThumbnailAttribute()
   {
-    return  './storage/' . $this->thumbnail;
+    return  '/storage/' . $this->thumbnail;
   }
 
   public function getCreatedAtAttribute($created_at)
@@ -86,7 +87,6 @@ class Video extends Model
 
   public function scopeFilter(Builder $builder, array $params)
   {
-     return (new VideoFilter($builder))->apply($params);
+    return (new VideoFilter($builder))->apply($params);
   }
-
 }
