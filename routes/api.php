@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\VideoController;
+use App\Http\Controllers\Api\V1\VideoController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -15,5 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-Route::get('/videos', [VideoController::class, 'index']);
+Route::prefix('v1')->group(function(){
+    Route::get('/videos/{video:slug}', [VideoController::class, 'show']);
+     
+});

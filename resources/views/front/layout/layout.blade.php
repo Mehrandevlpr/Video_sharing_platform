@@ -77,10 +77,10 @@
                 @endauth
 
                 @guest
-                  <div class="col-lg-2 col-md-2 col-sm-3 hidden-xs hidden-sm">
+                <div class="col-lg-2 col-md-2 col-sm-3 hidden-xs hidden-sm">
                     <a href="{{route('login.create')}}" class="btn btn-danger">ورود</a>
                     <a href="{{route('register.create')}}" class="btn btn-danger">ثبت نام</a>
-                  </div>
+                </div>
                 @endguest
             </div><!-- // row -->
         </div><!-- // container-full -->
@@ -90,7 +90,7 @@
     <div class="site-output">
 
         <div id="all-output" class="col-md-12">
-          @yield('content')
+            @yield('content')
         </div><!-- // row -->
 
 

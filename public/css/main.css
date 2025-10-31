@@ -414,8 +414,14 @@ header ul.dropdown-menu-friend-requests li{
 	padding: 20px;
 }
 header ul.dropdown-menu-friend-requests li:hover{
-	background-color:#fafafa
+	background-color:#fafafa;
 }
+
+header ul.dropdown-menu li a:hover{
+	background-color:#fafafa;
+	border-radius: 0 0 10px 10px;
+}
+
 header ul.dropdown-menu-friend-requests li a{
 	margin: 0px;
 	padding: 0px;
@@ -658,7 +664,7 @@ header ul.account-menu{
 	min-width:270px;
 	margin: 20px;
 	position: absolute;
-	border-radius: 0px;
+	border-radius: 0 0 10px 10px;
 	border-top-style: none;
 	border-right-style: none;
 	border-bottom-style: none;
@@ -667,6 +673,7 @@ header ul.account-menu{
 	padding-top: 0px;
 	padding-right: 0px;
 	padding-left: 0px;
+	background: #dddddd;
 }
 
 header ul.account-menu li:last-child{
@@ -680,11 +687,7 @@ header ul.account-menu li a{
 	font-size: 12px;
 	text-decoration: none;
 	display: block;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-	border-bottom-color: #ececec;
+	padding:15px;
 }
 header ul.account-menu li a .fa{
 	padding-left: 10px;
@@ -701,7 +704,11 @@ header ul.account-menu li  .color-3{
 header ul.account-menu li  .color-4{
 	color: #444444;
 }
-
+.video-info a.icon-pencil{
+	right: 58px;
+    vertical-align: middle;
+    position: relative;
+}
 form label[for="inputSort"], form label[for="inputLength"]{
 	display: block;
 	direction: rtl;
@@ -1006,7 +1013,8 @@ h1.new-video-title .fa{
 	color: #333333;
 	line-height: 19px;
 	text-decoration: none;
-	display: inline;
+	display: inline-block;
+    width: max-content;
 }
 
 .video-item a.channel-name{

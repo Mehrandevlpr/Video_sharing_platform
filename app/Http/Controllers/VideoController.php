@@ -19,6 +19,15 @@ use Illuminate\Support\Facades\Storage;
 class VideoController extends Controller
 {
 
+   /**
+    * Class constructor.
+    */
+   public function __construct()
+   {
+      // if(!Gate::allows('edit-video', $video)) return abort(403); multiple ways of check gate policies
+      // $this->authorize('update', $video);
+      $this->authorizeResource(Video::class, 'video');
+   }
 
    public function index()
    {
@@ -48,7 +57,6 @@ class VideoController extends Controller
 
    public function edit(Request $request, Video $video)
    {
-      if(!Gate::authorize('edit-video', $video)) ;
       $categories = Category::all();
       return view('front.videos.edit', compact('video', 'categories', 'request'));
    }
@@ -56,9 +64,8 @@ class VideoController extends Controller
 
    public function update(UpdateVideoRequest $request, Video $video)
    {
-
       if ($request->hasFile('file')) {
-         (new VideoService)->update( $video, $request->all());
+         (new VideoService)->update($video, $request->all());
       }
       return redirect()->route('front.videos.show', $video->slug)->with('alert', __('messages.video_edited'));
    }
