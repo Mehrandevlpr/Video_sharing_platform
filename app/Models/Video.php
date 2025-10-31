@@ -8,18 +8,19 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Hekmatinasser\Verta\Verta;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Str;
 
 
 class Video extends Model
 {
-  use HasFactory, Likeable;
+  use HasFactory, Likeable, SoftDeletes;
   protected $perPage = 18;
   protected $fillable = ['name', 'slug', 'thumbnail', 'length', 'path', 'description', 'category_id', 'user_id'];
   // for serialization
   // protected $hidden  = ['updated_at', 'created_at'];
   // protected $appends = ['owner_name'];
-  
+
   public function getRouteKeyName()
   {
     return 'slug';

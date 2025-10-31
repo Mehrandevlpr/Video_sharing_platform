@@ -13,6 +13,7 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "hekmatinasser/verta": "^8.5",
         "laravel/framework": "^8.40",
+        "laravel/sanctum": "^2.15",
         "laravel/tinker": "^2.5",
         "nesbot/carbon": "^2.66",
         "php-ffmpeg/php-ffmpeg": "^1.3",
