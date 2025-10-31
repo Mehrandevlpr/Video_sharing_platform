@@ -29,7 +29,7 @@ class VideoService
 
     public function update(Video $video, array $data)
     {
-        if ($data['file'] instanceof File) {
+        if ( isset($data['file']) && $data['file'] instanceof File) {
             $data = $this->handleFileUpload($data);
         }
         return $video->update($data);
