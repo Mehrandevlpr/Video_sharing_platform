@@ -4,7 +4,13 @@ This is a **Video Sharing Platform** built using **Laravel**, following multiple
 It’s designed to demonstrate scalable, maintainable, and clean Laravel architecture — perfect for learning and real-world development.
 
 ---
-
+![image](https://github.com/Mehrandevlpr/Video_sharing_platform/tree/main/resources/video/p1.png)
+![image](https://github.com/Mehrandevlpr/Video_sharing_platform/tree/main/resources/video/p2.png)
+![image](https://github.com/Mehrandevlpr/Video_sharing_platform/tree/main/resources/video/p3.png)
+![image](https://github.com/Mehrandevlpr/Video_sharing_platform/tree/main/resources/video/p4.png)
+![image](https://github.com/Mehrandevlpr/Video_sharing_platform/tree/main/resources/video/p5.png)
+![image](https://github.com/Mehrandevlpr/Video_sharing_platform/tree/main/resources/video/p6.png)
+![image](https://github.com/Mehrandevlpr/Video_sharing_platform/tree/main/resources/video/p7.png)
 ## 🚀 Features
 
 - 🔐 **User Authentication** (Register, Login, Logout)
