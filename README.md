@@ -4,13 +4,16 @@ This is a **Video Sharing Platform** built using **Laravel**, following multiple
 It’s designed to demonstrate scalable, maintainable, and clean Laravel architecture — perfect for learning and real-world development.
 
 ---
-![image](https://github.com/Mehrandevlpr/Video_sharing_platform/tree/main/resources/video/p1.png)
-![image](https://github.com/Mehrandevlpr/Video_sharing_platform/tree/main/resources/video/p2.png)
-![image](https://github.com/Mehrandevlpr/Video_sharing_platform/tree/main/resources/video/p3.png)
-![image](https://github.com/Mehrandevlpr/Video_sharing_platform/tree/main/resources/video/p4.png)
-![image](https://github.com/Mehrandevlpr/Video_sharing_platform/tree/main/resources/video/p5.png)
-![image](https://github.com/Mehrandevlpr/Video_sharing_platform/tree/main/resources/video/p6.png)
-![image](https://github.com/Mehrandevlpr/Video_sharing_platform/tree/main/resources/video/p7.png)
+
+<img src="https://github.com/Mehrandevlpr/Video_sharing_platform/tree/main/resources/video/p1.png" alt="Demo Image" width="400">
+<img src="https://github.com/Mehrandevlpr/Video_sharing_platform/tree/main/resources/video/p2.png" alt="Demo Image" width="400">
+<img src="https://github.com/Mehrandevlpr/Video_sharing_platform/tree/main/resources/video/p3.png" alt="Demo Image" width="400">
+<img src="https://github.com/Mehrandevlpr/Video_sharing_platform/tree/main/resources/video/p4.png" alt="Demo Image" width="400">
+<img src="https://github.com/Mehrandevlpr/Video_sharing_platform/tree/main/resources/video/p5.png" alt="Demo Image" width="400">
+<img src="https://github.com/Mehrandevlpr/Video_sharing_platform/tree/main/resources/video/p6.png" alt="Demo Image" width="400">
+<img src="https://github.com/Mehrandevlpr/Video_sharing_platform/tree/main/resources/video/p7.png" alt="Demo Image" width="400">
+
+
 
 ## 🚀 Features
 
