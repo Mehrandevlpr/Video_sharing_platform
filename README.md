@@ -4,14 +4,14 @@ This is a **Video Sharing Platform** built using **Laravel**, following multiple
 It’s designed to demonstrate scalable, maintainable, and clean Laravel architecture — perfect for learning and real-world development.
 
 ---
-
-<img src="https://github.com/Mehrandevlpr/Video_sharing_platform/blob/main/resources/video/p1.png?raw=true" alt="Demo Image" width="500">
-<img src="https://github.com/Mehrandevlpr/Video_sharing_platform/blob/main/resources/video/p2.png?raw=true" alt="Demo Image" width="500">
-<img src="https://github.com/Mehrandevlpr/Video_sharing_platform/blob/main/resources/video/p3.png?raw=true" alt="Demo Image" width="500">
-<img src="https://github.com/Mehrandevlpr/Video_sharing_platform/blob/main/resources/video/p4.png?raw=true" alt="Demo Image" width="500">
-<img src="https://github.com/Mehrandevlpr/Video_sharing_platform/blob/main/resources/video/p5.png?raw=true" alt="Demo Image" width="500">
-<img src="https://github.com/Mehrandevlpr/Video_sharing_platform/blob/main/resources/video/p6.png?raw=true" alt="Demo Image" width="500">
-
+<p align="center">
+  <img src="https://github.com/Mehrandevlpr/Video_sharing_platform/blob/main/resources/video/p1.png?raw=true" alt="Demo Image" width="500">
+  <img src="https://github.com/Mehrandevlpr/Video_sharing_platform/blob/main/resources/video/p2.png?raw=true" alt="Demo Image" width="500">
+  <img src="https://github.com/Mehrandevlpr/Video_sharing_platform/blob/main/resources/video/p3.png?raw=true" alt="Demo Image" width="500">
+  <img src="https://github.com/Mehrandevlpr/Video_sharing_platform/blob/main/resources/video/p4.png?raw=true" alt="Demo Image" width="500">
+  <img src="https://github.com/Mehrandevlpr/Video_sharing_platform/blob/main/resources/video/p5.png?raw=true" alt="Demo Image" width="500">
+  <img src="https://github.com/Mehrandevlpr/Video_sharing_platform/blob/main/resources/video/p6.png?raw=true" alt="Demo Image" width="500">
+</p>
 
 ## 🚀 Features
 
