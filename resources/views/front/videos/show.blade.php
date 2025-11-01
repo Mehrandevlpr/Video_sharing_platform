@@ -14,7 +14,7 @@
         <div id="watch">
 
             <!-- Video Player -->
-            <h1 class="video-title">{{ $video->name }}</h1>
+            <h1 class="video-title  bg-stone-800">{{ $video->name }}</h1>
             <div class="video-code">
                 <video controls style="height: 100%; width: 100%;">
                     <source
@@ -23,14 +23,14 @@
                 </video>
             </div><!-- // video-code -->
 
-            <div class="bg-light">
-                <p class="m-5 p-5">
+            <div class="bg-black">
+                <p class="m-5 p-5 bg-stone-800">
                     {{$video->description_value}}
                 </p>
             </div>
             <div class="video-share">
                 <ul class="like">
-                    <li><a class="deslike"
+                    <li><a class="dislike "
                             href="{{route('dislikes.store',  ['likeable_type' => 'video', 'likeable_id' => $video ])}}">
                             {{$video->dislikes_count}}
                             <i class="fa fa-thumbs-down"></i></a>
@@ -44,8 +44,7 @@
                 <ul class="social_link">
                     <li><a class="facebook" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                     </li>
-                    <li><a class="youtube" href="#"><i class="fa fa-youtube-play"
-                                aria-hidden="true"></i></a></li>
+                    <li><a class="youtube" href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
                     <li><a class="linkedin" href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                     </li>
                     <li><a class="google" href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
@@ -65,7 +64,7 @@
                 </div>
                 <div class="chanel-info">
                     <a class="title" href="#"> {{$video->owner_name}}</a>
-                    <span class="subscribers">436,414 اشتراک</span>
+                    <span class="subscriber">436,414 اشتراک</span>
                 </div>
                 <a href="#" class="subscribe">اشتراک</a>
             </div>
@@ -126,7 +125,7 @@
                 <h3 class="post-box-title">ارسال نظرات</h3>
                 <form action="{{route('comments.store', $video )}}" method="post">
                     @csrf
-                    <textarea class="form-control" rows="8" id="Message" placeholder="پیام" name="body"></textarea>
+                    <textarea rows="8" id="Message" placeholder="پیام" name="body"></textarea>
                     <button id="contact_submit" class="btn btn-dm">ارسال پیام</button>
                 </form>
                 @endauth

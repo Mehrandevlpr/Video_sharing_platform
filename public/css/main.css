@@ -59,7 +59,23 @@ a,a:active,a:focus,a:hover{
 	outline:none;
 	text-decoration:none;
 }
+#Message{
+	border-radius :20px;
+	background:#dfdfdf;
+	display: block;
+    width: 100%;
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #353535;
+	outline: none;
+}
+#Message:focus-visible{
+	border:none;
+}
 a:hover{
+	color:#223f84;
+}
+i:hover{
 	color:#223f84;
 }
 a{
@@ -68,7 +84,7 @@ a{
 	-ms-transition:all 0.25s ease-in-out;
 	-o-transition:all 0.25s ease-in-out;
 	transition:all 0.25s ease-in-out;
-	color:#333;
+	color:#424242;
 }
 ul{
 }
@@ -109,10 +125,12 @@ p{
 	font-family: 'IRANSansWeb', sans-serif;
 	font-size: 14px;
 	font-weight: 300;
-	color: #aaaaaf;
+	color: #3d3d3d;
 	line-height: 24px;
 }
-
+span{
+	color: #3d3d3d;
+}
 
  input{
 	border: 1px solid #eaeaea;
@@ -1022,7 +1040,7 @@ h1.new-video-title .fa{
 	font-family: 'IRANSansWeb', sans-serif;
 	font-size: 12px;
 	font-weight: 500;
-	color: #a7a7a7;
+	color: #494949;
 	margin-top: 4px;
 	margin-bottom: 4px;
 	line-height: 19px;
@@ -1290,7 +1308,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 }
 .chanel-item a.subscribe{
 	font-family: 'IRANSansWeb', sans-serif;
-	background-color: #becccc;
+	background-color: #474747;
 	height: 25px;
 	width: 85px;
 	text-align: center;
@@ -1307,8 +1325,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	z-index: 5;
 }
 .chanel-item a.subscribe:hover{
-	background-color:ff5e3a ;
-	}
+	background-color:#cea229 ;
+}
 .chanel-item:after{
 	content:" ";
 	display: block;
@@ -1567,7 +1585,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 }	
 #watch{
 	font-family: 'IRANSansWeb', sans-serif;
-	background-color: #FFF;
+	background-color: #8181818f;
+    border-radius: 20px;
 	padding: 30px;
 	margin-top: 30px;
 	margin-bottom: 30px;
@@ -1580,7 +1599,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	padding: 20px;
 	margin-top: 30px;
 	margin-bottom: 30px;
-	background-color: #fbfbfb;
+	background-color: #8181818f;
+    border-radius: 20px;
 }
 #watch .video-share:after{
 	content:" ";
@@ -1642,23 +1662,24 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	color: #FFF;
 }
 #watch .chanel-item{
-	background-color: #fbfbfb;
+	background-color: #8181818f;
+    border-radius: 20px;
 	border: 1px solid #E8E8E8;
 }
 #comments{
 	font-family: 'IRANSansWeb', sans-serif;
 	}
 #comments h3.post-box-title{
-	color: #ff5e3a;
-	font-size: 14px;
-	font-weight: 900;
-	border-bottom-width: 2.5px;
-	border-bottom-style: solid;
-	border-bottom-color: #fab318;
-	margin-top: 35px;
-	margin-bottom: 25px;
-	padding-top: 5px;
-	padding-bottom: 5px;
+	color: #2f2f2f;
+    font-size: 14px;
+    font-weight: 900;
+    border-bottom-width: 2.5px;
+    border-bottom-style: solid;
+    border-bottom-color: #737373;
+    margin-top: 35px;
+    margin-bottom: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 #comments h3.post-box-title span{
 	color: #66c1c3;
@@ -1729,7 +1750,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	margin-top: 20px;
 }	
 #related-posts{
-	background-color: #FFF;
+	background-color: #8181818f;
+    border-radius: 20px;
 	padding: 30px;
 	margin-top: 30px;
 	margin-bottom: 30px;
@@ -1787,7 +1809,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	font-family: 'IRANSansWeb', sans-serif;
 	font-size: 12px;
 	font-weight: 500;
-	color: #a7a7a7;
+	color: #444444;
 	margin-top: 4px;
 	margin-bottom: 4px;
 	line-height: 19px;

@@ -3,11 +3,10 @@
 namespace App\Policies;
 
 use App\Models\User;
-use App\Models\Video;
+use App\Models\comment;
 use Illuminate\Auth\Access\HandlesAuthorization;
-use Illuminate\Auth\Access\Response;
 
-class VideoPolicy
+class CommentPolicy
 {
     use HandlesAuthorization;
 
@@ -26,12 +25,12 @@ class VideoPolicy
      * Determine whether the user can view the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Video  $video
+     * @param  \App\Models\comment  $comment
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function view(User $user)
+    public function view(User $user, comment $comment)
     {
-       return true;
+        //
     }
 
     /**
@@ -49,22 +48,22 @@ class VideoPolicy
      * Determine whether the user can update the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Video  $video
+     * @param  \App\Models\comment  $comment
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function update(User $user, Video $video)
+    public function update(User $user, comment $comment)
     {
-        return $video->user_id === $user->id ? Response::allow() : Response::deny('You Must Be Owner Of The Video');
+        //
     }
 
     /**
      * Determine whether the user can delete the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Video  $video
+     * @param  \App\Models\comment  $comment
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function delete(User $user, Video $video)
+    public function delete(User $user, comment $comment)
     {
         //
     }
@@ -73,10 +72,10 @@ class VideoPolicy
      * Determine whether the user can restore the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Video  $video
+     * @param  \App\Models\comment  $comment
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function restore(User $user, Video $video)
+    public function restore(User $user, comment $comment)
     {
         //
     }
@@ -85,10 +84,10 @@ class VideoPolicy
      * Determine whether the user can permanently delete the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Video  $video
+     * @param  \App\Models\comment  $comment
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function forceDelete(User $user, Video $video)
+    public function forceDelete(User $user, comment $comment)
     {
         //
     }
