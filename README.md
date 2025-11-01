@@ -6,9 +6,12 @@ It’s designed to demonstrate scalable, maintainable, and clean Laravel archite
 ---
 
 <img src="https://github.com/Mehrandevlpr/Video_sharing_platform/blob/main/resources/video/p1.png?raw=true" alt="Demo Image" width="500">
-<img src="https://github.com/Mehrandevlpr/Video_sharing_platform/tree/main/resources/video/p2.png?raw=true" alt="Demo Image" width="500">
+<img src="https://github.com/Mehrandevlpr/Video_sharing_platform/blob/main/resources/video/p2.png?raw=true" alt="Demo Image" width="500">
+<img src="https://github.com/Mehrandevlpr/Video_sharing_platform/blob/main/resources/video/p3.png?raw=true" alt="Demo Image" width="500">
+<img src="https://github.com/Mehrandevlpr/Video_sharing_platform/blob/main/resources/video/p4.png?raw=true" alt="Demo Image" width="500">
+<img src="https://github.com/Mehrandevlpr/Video_sharing_platform/blob/main/resources/video/p5.png?raw=true" alt="Demo Image" width="500">
+<img src="https://github.com/Mehrandevlpr/Video_sharing_platform/blob/main/resources/video/p6.png?raw=true" alt="Demo Image" width="500">
 
-![Demo Image](https://raw.githubusercontent.com/Mehrandevlpr/Video_sharing_platform/tree/main/resources/video/p3.png?raw=true)
 
 ## 🚀 Features
 
