@@ -7,14 +7,14 @@ use App\Http\Requests\Auth\LoginRequest;
 
 class AuthController extends Controller
 {
-    
+
     public function login(LoginRequest $request)
     {
         $request->authenticate();
         $token = auth()->user()->createToken('API');
-        
+
         return response()->json([
-             'token' => $token->plainTextToken
+            'token' => $token->plainTextToken
         ], 200);
     }
 
@@ -22,5 +22,14 @@ class AuthController extends Controller
     public function client()
     {
         return auth()->user();
+    }
+
+    public function logout()
+    {
+        auth()->user()->tokens()->delete();
+
+        return response()->json([
+            'messages' => 'All tokens revoked'
+        ], 200);
     }
 }
