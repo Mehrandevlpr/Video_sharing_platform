@@ -39,7 +39,9 @@ class VideoObserver
      */
     public function deleted(video $video)
     {
-        //
+        if($video->trashed()) return true;
+        Storage::delete($video->path);
+        Storage::delete($video->thumbnail);
     }
 
     /**
