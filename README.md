@@ -15,19 +15,19 @@ It’s designed to demonstrate scalable, maintainable, and clean Laravel archite
 
 ## 🚀 Features
 
-- 🔐 **User Authentication** (Register, Login, Logout)
-- 🎞️ **Video Upload & Processing**
-- 💬 **Comment System**
-- 👍 **Like / Dislike System**
-- 🧭 **Advanced Routing Structure**
-- 🧩 **Service Container & Dependency Injection**
-- 🏗️ **Repository & Service Pattern**
-- 🧵 **Job Queues & Events**
-- 📡 **Real-time Notifications (Broadcasting with Pusher / Laravel Echo)**
-- 📁 **Media Management (Storage & File Handling)**
-- 📊 **Dashboard for Users and Admins**
-- 🧰 **RESTful API Structure**
-- 🧪 **Unit & Feature Tests**
+- User Authentication (Register, Login, Logout)
+- Video Upload & Processing
+- Comment System
+- Like / Dislike System
+- Advanced Routing Structure
+- Service Container & Dependency Injection
+- Repository & Service Pattern
+- Job Queues & Events
+- Real-time Notifications (Broadcasting with Pusher / Laravel Echo)
+- Media Management (Storage & File Handling)
+- Dashboard for Users and Admins
+- RESTful API Structure
+- Unit & Feature Tests
 
 ---
 
