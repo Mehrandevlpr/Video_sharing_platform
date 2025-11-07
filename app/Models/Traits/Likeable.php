@@ -28,7 +28,7 @@ trait Likeable
     if ($this->isLikedBy($user))  {
        return $this->likes()->where('vote', 1)->delete();
     };
-
+    // dd('hi');
     return $this->likes()->create([
       'vote' => 1,
       'user_id' => $user->id

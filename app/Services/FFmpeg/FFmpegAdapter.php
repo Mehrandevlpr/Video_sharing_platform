@@ -37,7 +37,7 @@ class FFmpegAdapter
     public function getFrameImage($time = 1) : string
     {
         $video = $this->ffmpeg->open(Storage::path($this->ffmpegOriginalPath));
-        $outputFile =  pathinfo($this->ffmpegOriginalPath, PATHINFO_FILENAME) . '_frame.jpg';
+        $outputFile =  pathinfo($this->ffmpegOriginalPath, PATHINFO_FILENAME) . '_frame.webp';
         $storage_path = storage_path('app/public/'.$outputFile);
         $video->frame(\FFMpeg\Coordinate\TimeCode::fromSeconds($time))->save($storage_path);
 

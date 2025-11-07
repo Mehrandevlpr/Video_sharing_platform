@@ -7,13 +7,15 @@ use Illuminate\Support\Facades\DB;
 
 class VideoFilter
 {
+
+
     /**
      * The constructor initializes an object with a Builder instance as a parameter.
      * @params Builder 
      */
     public function __construct(public Builder $builder)
     {
-        // $this-> = $;
+       
     }
 
 
@@ -28,8 +30,7 @@ class VideoFilter
             if (is_null($value) && method_exists(self::class, $methodName)) continue;
             $this->$methodName($value);
         }
-        // dump($this->builder->dump());
-        // dd();
+
     }
 
 

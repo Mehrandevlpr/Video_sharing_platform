@@ -5,9 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Video Post – Video Sharing HTML Template</title>
-    <meta name="keywords" content="Blog website templates" />
-    <meta name="description" content="Author - Personal Blog Wordpress Template">
-    <meta name="author" content="Rabie Elkheir">
+    <meta name="author" content="MH95">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap Core CSS -->
     <!-- Owl Carousel Assets -->
@@ -17,12 +15,7 @@
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
+
 
 </head>
 
@@ -62,15 +55,17 @@
                             <div class="thumb"><img
                                     src="{{auth()->user()->gravatar}}" alt="">
                             </div>
-                            <h2>{{ auth()->user()->name}} </h2>
-                            <h3>25 اشتراک</h3>
+                            <div class="details">
+                                <h2>{{ auth()->user()->name}} </h2>
+                                <h3>25 اشتراک</h3>
+                            </div>
                             <i class="fa fa-angle-down"></i>
                         </a>
                         <ul class="dropdown-menu account-menu">
-                            <li><a href="#"><i class="fa fa-edit color-1"></i>ویرایش پروفایل</a></li>
-                            <li><a href="#"><i class="fa fa-video-camera color-2"></i>اضافه کردن فیلم</a></li>
-                            <li><a href="#"><i class="fa fa-star color-3"></i>برگزیده</a></li>
-                            <li><a href="{{route('logout')}}""><i class="fa fa-sign-out color-4"></i>خروج</a></li>
+                            <li><a href="#"><i class="fa fa-edit"></i>ویرایش پروفایل</a></li>
+                            <li><a href="#"><i class="fa fa-video-camera"></i>اضافه کردن فیلم</a></li>
+                            <li><a href="#"><i class="fa fa-star"></i>برگزیده</a></li>
+                            <li><a href="{{route('logout')}}""><i class=" fa fa-sign-out"></i>خروج</a></li>
                         </ul>
                     </div>
                 </div>
@@ -97,8 +92,7 @@
 
     </div>
     </div>
-    <script src="https://kit.fontawesome.com/0a3355aaa9.js" crossorigin="anonymous"></script>
-    <script src="{{ asset('js/main.js') }}"></script>
+    <script src="{{ asset('js/main.js') }}" defer></script>
 </body>
 
 </html>

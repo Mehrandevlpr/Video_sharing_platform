@@ -33,12 +33,23 @@ Version       : 1.0
 */
 /************* Typography ******************/
 @font-face {
+  font-family: "Font Awesome 6 Free";
+  src: url("/fonts/fa-solid-900.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
   font-family: 'IRANSansWeb';
   src: url('fonts/IRANSansWeb.eot?-wwn5ej');
   src: url('fonts/IRANSansWeb.eot?#iefix-wwn5ej') format('embedded-opentype'),
   url('fonts/IRANSansWeb.woff2') format('woff');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
+  ascent-override: 90%;
+  descent-override: 20%;
+  line-gap-override: 0%;
 }
 *{
 	padding:0;
@@ -51,6 +62,7 @@ img{
 }
 a,a:active,a:focus,a:hover{
 	outline:none;
+	color:wheat;
 	text-decoration:none;
 }
 #Message{
@@ -91,6 +103,16 @@ h1 {
     font-weight: 600;
     margin: 0 0 15px;
     text-transform: uppercase;
+}
+select,option{
+	border-radius: 10px;
+	outline: none;
+}
+
+
+.card-header{
+	direction: rtl;
+	margin: 20px 0;
 }
 h2{
 	font-size:17px;
@@ -386,7 +408,7 @@ header a.user-area h2{
 	margin: 0px;
 	padding: 0px;
 	}
-header a.user-area h3{
+header a.user-area h3,h2{
 	font-family: 'IRANSansWeb', sans-serif;
 	color: #dfdfdf;
 	font-weight: 400;
@@ -394,11 +416,16 @@ header a.user-area h3{
 	text-transform: capitalize;
 	padding: 0px;
 	margin-top: 0px;
+	display: inline;
 	margin-right: 0px;
 	margin-bottom: 0px;
 	margin-left: 0px;
 	}
-header a.user-area .fa{
+	header a.user-area .details{
+		display: flex;
+    flex-direction: column;
+	}
+header a.user-area .fa-angle-down{
 	position: absolute;
 	top: 40%;
 	left: 10px;
@@ -701,7 +728,7 @@ header ul.account-menu li a{
 	display: block;
 	padding:15px;
 }
-header ul.account-menu li a .fa{
+header ul.account-menu li a{
 	padding-left: 10px;
 }
 header ul.account-menu li  .color-1{

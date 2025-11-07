@@ -4,9 +4,7 @@ namespace App\Listeners;
 
 use App\Events\VideoCreated;
 use App\Mail\verfiyEmail;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Queue\InteractsWithQueue;
-use Illuminate\Support\Facades\Mail;
+use App\Services\Notification\Notification;
 
 class SendEmail
 {
@@ -28,6 +26,7 @@ class SendEmail
      */
     public function handle(VideoCreated $event)
     {
-        Mail::to($event->user->email)->send(new verfiyEmail($event->user));
+        $notification = new Notification($event->user, new verfiyEmail($event->user));
+        $notification->sendEmail();
     }
 }
