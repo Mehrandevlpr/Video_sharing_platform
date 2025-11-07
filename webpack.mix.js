@@ -13,7 +13,7 @@ const mix = require('laravel-mix');
 mix.styles([
     'resources/css/bootstrap.min.css',
     'resources/css/style.css',
-    'resources/css/responsive.css'
+    'resources/css/responsive.css',
 ], 'public/css/main.css');
 
 mix.styles([
@@ -28,7 +28,7 @@ mix.js([
     'resources/js/bootstrap.min.js',
     'resources/js/imagesloaded.pkgd.min.js',
     'resources/js/grid-blog.min.js'
-], 'public/js/main.js')
+], 'public/js/main.js').version(); 
 
 mix.copyDirectory('resources/css/fonts', 'public/css/fonts')
 mix.copyDirectory('resources/img', 'public/img')
@@ -36,4 +36,11 @@ mix.copyDirectory('resources/video', 'public/img/video')
 
 mix.js('resources/js/app.js', 'public/js').postCss('resources/css/app.css', 'public/css', [
        require('tailwindcss'),
-   ])
+])
+   
+mix.webpackConfig({
+    optimization: {
+        usedExports: true,   // Enables tree-shaking (removes unused code)
+        minimize: true       // Minimizes (uglifies) your JS for smaller bundles
+    }
+});

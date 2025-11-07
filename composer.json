@@ -10,7 +10,7 @@
         "doctrine/dbal": "^3.6",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^3.0",
-        "guzzlehttp/guzzle": "^7.0.1",
+        "guzzlehttp/guzzle": "^7.10",
         "hekmatinasser/verta": "^8.5",
         "laravel/framework": "^8.40",
         "laravel/sanctum": "^2.15",

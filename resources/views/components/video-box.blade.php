@@ -21,12 +21,13 @@
                             </div>
                             <a href="#" class="channel-name">
                                 <span>
-                                    <i class="fa fa-check-circle">{{$video->owner_name}}</i>
+                                    <i class="fa fa-check-circle"></i>
+                                    <b>{{$video->owner_name}}</b>
                                 </span>
                             </a>
 
-                            <span class="views"><i class="fa fa-eye"></i>2.8M بازدید </span>
-                            <span class="date"><i class="fa fa-clock-o"></i>{{$video->created_at}} </span>
+                            <span class="views ms-5"><i class="fa fa-eye"></i>2.8M بازدید </span>
+                            <span class="date"><i class="fa-solid fa-clock"></i>{{$video->created_at}} </span>
                             <span class="date"><i class="fa fa-tag"></i>{{$video->category_name}} </span>
                         </div>
                     </div>

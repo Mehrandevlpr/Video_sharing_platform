@@ -17,7 +17,7 @@ class CategoryFactory extends Factory
         $categories = [
             'ورزشی' => [
                 'slug' => 'sport',
-                'icon' => 'fa fa-futbol-o'
+                'icon' => 'fa-solid fa-basketball'
             ],
             'سینما' => [
                 'slug' => 'cinema',
@@ -29,7 +29,7 @@ class CategoryFactory extends Factory
             ],
             'طنز' => [
                 'slug' => 'fun',
-                'icon' => 'fa fa-smile-o'
+                'icon' => 'fa-solid fa-face-smile'
             ],
             'وحشت' => [
                 'slug' => 'horror',

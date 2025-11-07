@@ -10,7 +10,7 @@
         
         <div class="form-output">
 			<x-validation-errors />
-        	<form action="{{route('register.store')}}" method="post">
+        	<form action="{{route('register.store')}}" method="post" id="register-form">
                 @csrf
                 <div class="form-group label-floating">
                     <label class="control-label"> نام </label>

@@ -20,25 +20,31 @@
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
+    <script src="https://www.google.com/recaptcha/enterprise.js?render={{env('RECAPTCHA_SITE_KEY')}}"></script>
 </head>
 
 <body class="@yield('class-body')">
     <!--======= header =======-->
 
-        @if(session('alert'))
-         <div class="alert alert-success">
-            {{session('alert')}}
-         </div>
-        @endif
+    @if(session('alert'))
+    <div class="alert alert-success">
+        {{session('alert')}}
+    </div>
+    @endif
 
-        @yield('content')
+    @yield('content')
 
+    <script src="{{ asset('js/main.js') }}" async defer></script>
     <script src="https://kit.fontawesome.com/0a3355aaa9.js" crossorigin="anonymous"></script>
-    <script src="{{ asset('js/main.js') }}"></script>
+    <script>
+        function onSubmit(token) {
+            document.getElementById("login-form").submit();
+        }
+    </script>
 </body>
 
 </html>
