@@ -5,12 +5,12 @@ It’s designed to demonstrate scalable, maintainable, and clean Laravel archite
 
 ---
 <p align="center">
-  <img src="https://github.com/Mehrandevlpr/Video_sharing_platform/blob/main/resources/video/p1.png?raw=true" alt="Demo Image" width="500">
-  <img src="https://github.com/Mehrandevlpr/Video_sharing_platform/blob/main/resources/video/p2.png?raw=true" alt="Demo Image" width="500">
-  <img src="https://github.com/Mehrandevlpr/Video_sharing_platform/blob/main/resources/video/p3.png?raw=true" alt="Demo Image" width="500">
-  <img src="https://github.com/Mehrandevlpr/Video_sharing_platform/blob/main/resources/video/p4.png?raw=true" alt="Demo Image" width="500">
-  <img src="https://github.com/Mehrandevlpr/Video_sharing_platform/blob/main/resources/video/p5.png?raw=true" alt="Demo Image" width="500">
-  <img src="https://github.com/Mehrandevlpr/Video_sharing_platform/blob/main/resources/video/p6.png?raw=true" alt="Demo Image" width="500">
+  <img src="https://github.com/Mehrandevlpr/Video_sharing_platform/blob/main/resources/video/p1.png?raw=true" alt="Demo Image" width="250">
+  <img src="https://github.com/Mehrandevlpr/Video_sharing_platform/blob/main/resources/video/p2.png?raw=true" alt="Demo Image" width="250">
+  <img src="https://github.com/Mehrandevlpr/Video_sharing_platform/blob/main/resources/video/p3.png?raw=true" alt="Demo Image" width="250">
+  <img src="https://github.com/Mehrandevlpr/Video_sharing_platform/blob/main/resources/video/p4.png?raw=true" alt="Demo Image" width="250">
+  <img src="https://github.com/Mehrandevlpr/Video_sharing_platform/blob/main/resources/video/p5.png?raw=true" alt="Demo Image" width="250">
+  <img src="https://github.com/Mehrandevlpr/Video_sharing_platform/blob/main/resources/video/p6.png?raw=true" alt="Demo Image" width="250">
 </p>
 
 ## 🚀 Features
